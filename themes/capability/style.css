@@ -1210,6 +1210,15 @@ object {
     width: 320px;
 }
 
+@media screen and (max-width: 767px) {
+    .footer-widgets .widget {
+        text-align: center;
+        width: 100%;
+        padding: 0 15px;
+        float: none;
+    }
+}
+
 .footer-logo {
     min-width: 300px;
     background-color: white;
