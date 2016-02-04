@@ -74,27 +74,65 @@ register_activation_hook( __FILE__, 'my_rewrite_flush' );
 /* Taxonomies for Capabilities */
 
 function capability_custom_taxonomies() {
+    
     /* Service Category */
-    register_taxonomy(
-            'service-category',
-            'team_member',
-            array(
-                'label'             => 'Service Category',
-                'rewrite'           => array( 'slug' => 'service-categories'),
-                'hierarchical'      => true,
-            )
+    $service_category_labels = array(
+        'name'              => 'Service Categories',
+        'singular_name'     => 'Service Category',
+        'search_items'      => 'Search Service Categories',
+        'all_items'         => 'All Service Categories',
+        'parent_item'       => 'Parent Service Category',
+        'parent_item_colon' => 'Parent Service Category:',
+        'edit_item'         => 'Edit Service Category',
+        'update_item'       => 'Update Service Category',
+        'add_new_item'      => 'Add New Service Category',
+        'new_item_name'     => 'New Service Category Name',
+        'menu_name'         => 'Service Categories',
     );
     
-    /* Counties */
-    register_taxonomy(
-            'service-county',
-            'team_member',
-            array(
-                'label'             => 'Service Counties',
-                'rewrite'           => array( 'slug' => 'service-counties'),
-                'hierarchical'      => false,
-            )
+    $service_category_args = array(
+        'labels'            => $service_category_labels,
+        'rewrite'           => array( 'slug' => 'service-categories'),
+        'hierarchical'      => true,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
     );
+    
+    register_taxonomy( 'service-category', array( 'team_member' ), $service_category_args );
+    
+    /* Counties */
+    
+    $service_county_labels = array(
+        'name'                       => 'Service Counties',
+        'singular_name'              => 'Service County',
+        'search_items'               => 'Search Service Counties',
+        'popular_items'              => 'Popular Service Counties',
+        'all_items'                  => 'All Service Counties',
+        'parent_item'                => null,
+        'parent_item_colon'          => null,
+        'edit_item'                  => 'Edit Service County',
+        'update_item'                => 'Update Service County',
+        'add_new_item'               => 'Add New Service County',
+        'new_item_name'              => 'New Service County Name',
+        'separate_items_with_commas' => 'Separate service counties with commas',
+        'add_or_remove_items'        => 'Add or remove service counties',
+        'choose_from_most_used'      => 'Choose from the most used service counties',
+        'not_found'                  => 'No service counties found.',
+        'menu_name'                  => 'Service Counties',
+    );
+
+    $service_county_args = array(
+        'hierarchical'          => false,
+        'labels'                => $service_county_labels,
+        'show_ui'               => true,
+        'show_admin_column'     => true,
+        'update_count_callback' => '_update_post_term_count',
+        'query_var'             => true,
+        'rewrite'               => array( 'slug' => 'service-counties' ),
+    );
+
+    register_taxonomy( 'service-county', array( 'team_member' ), $service_county_args );
 }
 
 add_action( 'init', 'capability_custom_taxonomies');
