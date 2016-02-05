@@ -1045,6 +1045,45 @@ a:active {
 }
 
 /*--------------------------------------------------------------
+## Single Team Member Pages
+--------------------------------------------------------------*/
+.team-member-page-heading {
+    margin-top: -1.4em;
+    margin-left: -1.4em;
+    margin-right: -1.4em;
+    position: relative;
+    
+}
+
+.team-member-name {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: #90b73e;
+    background-color: rgba(144, 183, 62, .8); 
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.team-member-contact {
+    padding: .5em;
+}
+
+ul.contact-list {
+    padding: 0;
+    margin: 0;
+}
+
+ul.contact-list li {
+    list-style: none;
+}
+
+ul.contact-list li i {
+    margin-right: 6px;
+}
+/*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/
 .blog .format-aside .entry-title,
