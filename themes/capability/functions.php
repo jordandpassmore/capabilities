@@ -41,7 +41,9 @@ function capability_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+        set_post_thumbnail_size( 1200, 675, true );
         add_image_size( 'site-header-logo-large', 200, 73);
+        add_image_size( 'capability-team-member-index', 300, 300, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
