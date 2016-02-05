@@ -1055,6 +1055,12 @@ a:active {
     
 }
 
+.team-member-page-heading img {
+    max-width: 50em;
+    margin: auto;
+    display: block;
+}
+
 .team-member-name {
     position: absolute;
     width: 100%;
