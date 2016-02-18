@@ -1077,6 +1077,11 @@ a:active {
     
 }
 
+.team-member-page-heading {
+    background-color: #0b7ebf;
+    background-color: rgb(11, 126, 191);
+}
+
 @media screen and (min-width: 40em) {
     .team-member-page-heading, .team-member-select-box {
         margin-top: -1.8em;
@@ -1089,8 +1094,7 @@ a:active {
 }
 
 .team-member-page-heading img {
-    width: 100%;
-    max-width: 62.5em;
+    max-width: 100%;
     margin: auto;
     display: block;
 }
@@ -1141,7 +1145,9 @@ a:active {
     padding: 10px;
     font-size: 16px;
 }
-
+.team-member-index-item img {
+    vertical-align: bottom;
+}
 @media screen and (min-width: 601px) {
     .team-member-index-item {
         width: 33.333333333%;

@@ -54,6 +54,40 @@ function capability_custom_posttypes() {
         'supports'           => array( 'title', 'thumbnail', 'custom-fields' )
     );
     register_post_type( 'team_member', $args );
+    
+    $labels_services = array(
+        'name'               => 'Services',
+        'singular_name'      => 'Service',
+        'menu_name'          => 'Services',
+        'name_admin_bar'     => 'Service',
+        'add_new'            => 'Add New',
+        'add_new_item'       => 'Add New Service',
+        'new_item'           => 'New Service',
+        'edit_item'          => 'Edit Service',
+        'view_item'          => 'View Service',
+        'all_items'          => 'All Services',
+        'search_items'       => 'Search Services',
+        'parent_item_colon'  => 'Parent Services:',
+        'not_found'          => 'No services found.',
+        'not_found_in_trash' => 'No services found in Trash.',
+    );
+    
+    $args_services = array(
+        'labels'             => $labels_services,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'menu_icon'          => 'dashicons-hammer',
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'services' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => 20,
+        'supports'           => array( 'title', 'thumbnail', 'custom-fields', 'editor', 'excerpt' )
+    );
+    register_post_type( 'service', $args_services );
 }
 
 add_action( 'init', 'capability_custom_posttypes' );
@@ -99,7 +133,7 @@ function capability_custom_taxonomies() {
         'query_var'         => true,
     );
     
-    register_taxonomy( 'service-category', array( 'team_member' ), $service_category_args );
+    register_taxonomy( 'service-category', array( 'service' ), $service_category_args );
     
     /* Counties */
     

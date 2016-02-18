@@ -15,7 +15,7 @@
 			if ( is_single() ) { ?>
                             <div class="team-member-page-heading">
                             <?php if ( has_post_thumbnail() ) {
-                                the_post_thumbnail();
+                                the_post_thumbnail('capability-team-member-single');
                             } else {
                                 $placeholder_image = wp_get_attachment_image('1741', 'full');
                                 echo $placeholder_image;
