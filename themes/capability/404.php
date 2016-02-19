@@ -14,6 +14,10 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<header class="page-header">
+                                    <figure class="thumb404">
+                                        <?php $the_path = get_template_directory_uri() . '/img/unnamed.jpg'; ?>
+                                        <img src="<?php echo $the_path ?>" alt="404 Thumb"/>
+                                    </figure>
 					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'capability' ); ?></h1>
 				</header><!-- .page-header -->
 
