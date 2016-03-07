@@ -109,6 +109,30 @@ register_activation_hook( __FILE__, 'my_rewrite_flush' );
 
 function capability_custom_taxonomies() {
     
+    /* Service Category */
+    $service_category_labels = array(
+        'name'              => 'Service Categories',
+        'singular_name'     => 'Service Category',
+        'search_items'      => 'Search Service Categories',
+        'all_items'         => 'All Service Categories',
+        'parent_item'       => 'Parent Service Category',
+        'parent_item_colon' => 'Parent Service Category:',
+        'edit_item'         => 'Edit Service Category',
+        'update_item'       => 'Update Service Category',
+        'add_new_item'      => 'Add New Service Category',
+        'new_item_name'     => 'New Service Category Name',
+        'menu_name'         => 'Service Categories',
+    );
+    
+    $service_category_args = array(
+        'labels'            => $service_category_labels,
+        'rewrite'           => array( 'slug' => 'service-categories'),
+        'hierarchical'      => true,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+    );
+    
     register_taxonomy( 'service-category', array( 'service' ), $service_category_args );
     
     /* Counties */

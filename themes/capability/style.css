@@ -400,6 +400,10 @@ big {
     color: rgb(255, 255, 255);
 }
 
+.text-centered {
+    text-align: center;
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -1084,6 +1088,35 @@ a:active {
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+/*--------------------------------------------------------------
+## Single Service Category Pages
+--------------------------------------------------------------*/
+.service-category-theme {
+    color: white;
+}
+
+.service-category-container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-category-theme-icon {
+    margin: 0;
+    display: inline;
+    max-width: 300px;
+}
+
+.service-category-theme-icon img {
+    vertical-align: middle;
+}
+
+.service-category-title {
+    display: inline;
+    max-width: 500px;
+}
+
 
 /*--------------------------------------------------------------
 ## Single Team Member Pages
