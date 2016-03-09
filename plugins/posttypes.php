@@ -83,7 +83,7 @@ function capability_custom_posttypes() {
         'rewrite'            => array( 'slug' => 'services' ),
         'capability_type'    => 'post',
         'has_archive'        => true,
-        'hierarchical'       => false,
+        'hierarchical'       => true,
         'menu_position'      => 20,
         'supports'           => array( 'title', 'thumbnail', 'custom-fields', 'editor', 'excerpt' )
     );

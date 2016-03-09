@@ -44,6 +44,7 @@ function capability_setup() {
         set_post_thumbnail_size( 1200, 675, true );
         add_image_size( 'site-header-logo-large', 200, 73);
         add_image_size( 'capability-team-member-index', 300, 300, true );
+        add_image_size( 'capability-service-category-icon', 200, 200);
         add_image_size( 'capability-team-member-single', 1200, 675, true );
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(

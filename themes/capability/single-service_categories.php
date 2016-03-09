@@ -15,11 +15,11 @@ get_header(); ?>
             ?>
             <div class="service-category-theme" style="background-color: <?php the_field('category_color') ?>">
                 <div class="service-category-container">
-                    <figure class="service-category-theme-icon">
-                    <?php the_post_thumbnail('medium');
+                    <?php the_post_thumbnail('capability-service-category-icon');
                     ?>
-                    </figure>
-                    <?php the_title( '<h1 class="entry-title service-category-title">', '</h1>' ); ?>
+                    <div class="service-category-title">
+                        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+                    </div>
                 </div>
             </div>
 		<main id="main" class="site-main" role="main">

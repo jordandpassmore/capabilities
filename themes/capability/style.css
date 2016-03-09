@@ -802,6 +802,9 @@ a:active {
             max-height: none;
             padding-left: 0;
             text-align: right;
+            max-width:1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .main-navigation.toggled ul {
@@ -963,8 +966,11 @@ a:active {
 }
 .site-branding {
     width: 100%;
+    max-width: 1200px;
     height: 120px;
     position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .site-logo {
@@ -1052,7 +1058,7 @@ a:active {
 
 @media screen and (min-width: 75em) {
     .site-main {
-        max-width: 62.5em;
+        max-width: 1200px;
         margin: 1.8em auto;
     }
 }
@@ -1097,24 +1103,17 @@ a:active {
 }
 
 .service-category-container {
-    max-width: 800px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
+    padding-bottom: 1em;
 }
 
-.service-category-theme-icon {
-    margin: 0;
-    display: inline;
-    max-width: 300px;
-}
 
-.service-category-theme-icon img {
-    vertical-align: middle;
-}
-
-.service-category-title {
-    display: inline;
-    max-width: 500px;
+.service-category-title h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 
