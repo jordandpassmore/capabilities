@@ -976,7 +976,7 @@ a:active {
 .site-logo {
     position: absolute;
     bottom: 1em;
-    left: 3em;
+    left: 1.8em;
 }
 
 @media screen and (max-width: 767px) {
@@ -1056,10 +1056,13 @@ a:active {
     }
 }*/
 
-@media screen and (min-width: 75em) {
+@media screen and (min-width: 80em) {
     .site-main {
         max-width: 1200px;
         margin: 1.8em auto;
+    }
+    .site-logo {
+        left: 0;
     }
 }
 
@@ -1095,6 +1098,32 @@ a:active {
 	margin: 0 0 1.5em;
 }
 
+/*--------------------------------------------------------------
+## Single Service Pages
+--------------------------------------------------------------*/
+.service-theme {
+    color: white;
+    background-size: cover;
+    background-position: center;
+}
+
+.service-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.service-title {
+    background-color: rgba(11, 126, 191,.7); //HARD CODED!! TAKE OUT!!!
+}
+
+.service-title h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+    line-height: 300px;
+}
 /*--------------------------------------------------------------
 ## Single Service Category Pages
 --------------------------------------------------------------*/
