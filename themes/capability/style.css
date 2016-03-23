@@ -1128,6 +1128,35 @@ a:active {
     
     line-height: 300px;
 }
+
+/*--------------------------------------------------------------
+## Service Category Archive
+--------------------------------------------------------------*/
+
+.service-category-listing {
+    width: 100%;
+    display: inline-block;
+}
+
+.service-category-icon {
+    width: 33%;
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.service-category-excerpt {
+    width: 66%;
+    display: inline-block;
+}
+
+@media screen and (min-width: 699px) {
+    .service-category-listing {
+        width: 50%;
+    }
+    .service-category-listing::after {
+        clear: none;
+    }
+}
 /*--------------------------------------------------------------
 ## Single Service Category Pages
 --------------------------------------------------------------*/
@@ -1145,6 +1174,10 @@ a:active {
     padding-bottom: 1em;
 }
 
+.service-page-title {
+    margin-top: -70px;
+    text-shadow: 2px 2px 2px black;
+}
 
 .service-category-title h1,
 .service-page-title h1 {

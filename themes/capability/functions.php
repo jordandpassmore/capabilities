@@ -42,11 +42,12 @@ function capability_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
         set_post_thumbnail_size( 1200, 675, true );
+        add_image_size( 'capability-small-icon', 100, 100);
         add_image_size( 'site-header-logo-large', 200, 73);
         add_image_size( 'capability-team-member-index', 300, 300, true );
         add_image_size( 'capability-service-category-icon', 200, 200);
         add_image_size( 'capability-team-member-single', 1200, 675, true );
-        add_image_size( 'capability-page-header-image', 1200, 300, true );
+        add_image_size( 'capability-page-header-image', 1200, 400, array('center','center') );
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'capability' ),
