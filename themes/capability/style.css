@@ -1026,6 +1026,39 @@ a:active {
 	max-width: 100%;
 }
 
+#secondary {
+    position: relative;
+    padding: 1.8em 1.4em 0;
+    background-color: #ededed;
+}
+
+#secondary .widget {
+    margin: 0 0 1.5em;
+    padding: 1.8em;
+    background: #fff;
+}
+
+#secondary .widget-title {
+    margin-top: .5em;
+    margin-bottom: .5em;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 40em) {
+    #secondary {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1.8em;
+    }
+    #secondary .widget {
+        float: left;
+        width: 300px;
+        margin: 0 .9em 1.8em;
+    }
+}
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/

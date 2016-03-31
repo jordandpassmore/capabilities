@@ -106,7 +106,7 @@ add_action( 'after_setup_theme', 'capability_content_width', 0 );
  */
 function capability_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'capability' ),
+		'name'          => esc_html__( 'Widget Area', 'capability' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -177,4 +177,6 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-
+@ini_set( 'upload_max_size' , '64M' );
+@ini_set( 'post_max_size', '64M' );
+@ini_set( 'max_execution_time', '300' );
