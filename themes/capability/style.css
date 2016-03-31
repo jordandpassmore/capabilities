@@ -292,6 +292,7 @@ textarea {
 .site-content {
     font-size: 1.125em;
     line-height: 1.6em;
+    background-color: #fff;
 }
 
 h1,
@@ -1026,38 +1027,7 @@ a:active {
 	max-width: 100%;
 }
 
-#secondary {
-    position: relative;
-    padding: 1.8em 1.4em 0;
-    background-color: #ededed;
-}
 
-#secondary .widget {
-    margin: 0 0 1.5em;
-    padding: 1.8em;
-    background: #fff;
-}
-
-#secondary .widget-title {
-    margin-top: .5em;
-    margin-bottom: .5em;
-    font-size: 1em;
-    text-transform: uppercase;
-}
-
-@media screen and (min-width: 40em) {
-    #secondary {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 1.8em;
-    }
-    #secondary .widget {
-        float: left;
-        width: 300px;
-        margin: 0 .9em 1.8em;
-    }
-}
 
 /*--------------------------------------------------------------
 # Content
@@ -1089,13 +1059,70 @@ a:active {
     }
 }*/
 
+#secondary {
+    position: relative;
+    padding: 1.8em 1.4em 0;
+    background-color: #ededed;
+}
+
+#secondary .widget {
+    margin: 0 0 1.5em;
+    padding: 1.8em;
+}
+
+#secondary .widget-title {
+    margin-top: .5em;
+    margin-bottom: .5em;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 40em) {
+    #secondary {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1.8em;
+    }
+    #secondary .widget {
+        float: left;
+        width: 300px;
+        margin: 0 .9em 1.8em;
+    }
+}
+
 @media screen and (min-width: 80em) {
+   
     .site-main {
         max-width: 1200px;
         margin: 1.8em auto;
     }
     .site-logo {
         left: 0;
+    }
+    
+    .sidebar-right article {
+        max-width: 800px;
+        float: left;
+        padding: 1em 1.5em;
+    }
+    
+    .sidebar-right #secondary {
+        max-width: 400px;
+        float: right;
+        background: none;
+    }
+    
+      .sidebar-left article {
+        max-width: 800px;
+        float: right;
+        padding: 1em 1.5em;
+    }
+    
+    .sidebar-left #secondary {
+        max-width: 400px;
+        float: left;
+        background: none;
     }
 }
 
@@ -1130,6 +1157,7 @@ a:active {
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
 
 /*--------------------------------------------------------------
 ## Single Service Pages

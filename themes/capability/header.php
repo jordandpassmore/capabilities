@@ -21,7 +21,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site axt">
+<div id="page" class="site axt <?php echo get_theme_mod( 'layout_setting', 'sidebar-right') ?>">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'capability' ); ?></a>
             <header id="masthead" class="site-header" role="banner">
                 <div class="site-branding">

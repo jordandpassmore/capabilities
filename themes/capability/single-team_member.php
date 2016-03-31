@@ -18,11 +18,11 @@ get_header(); ?>
 			get_template_part( 'template-parts/content-team_members', get_post_format() );
 
 		endwhile; // End of the loop.
+                get_sidebar();
 		?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
